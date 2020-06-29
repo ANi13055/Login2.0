@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- external stylesheet -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="face">
+        <img class="avatar" src="/assets/avatar.png" alt="avatar" />
+
+        <!-- eyes -->
+        <div class="eyes">
+          <span class="eyebrow e-1"></span>
+          <span class="eyebrow e-2"></span>
+
+          <div class="eye e-1">
+            <span class="pupil"></span>
+          </div>
+          <div class="eye e-2">
+            <span class="pupil"></span>
+          </div>
+        </div>
+
+        <!-- mouth -->
+        <div class="mouth">
+          <span class="teeth"></span>
+        </div>
+      </div>
+
+      <section>
+        <h1>Log<span>in</span></h1>
+
+        <!--* Form *-->
+        <form onsubmit="return logIn()" action="home.html">
+          <div class="login-info">
+            <input
+              class="detail name"
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Name"
+              onmousedown="hideLable()"
+            />
+            <label class="label-1" for="name">Required!</label>
+
+            <input
+              class="detail email"
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Email-ID"
+            />
+            <label class="label-2" for="email">Required!</label>
+
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            <input
+              class="detail"
+              id="passwd"
+              name="passwd"
+              type="password"
+              placeholder="Password"
+            />
+            <label class="label-3" for="passwd">Required!</label>
+            <br />
+
+            <!-- submit button -->
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

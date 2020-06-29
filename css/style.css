@@ -1,0 +1,244 @@
+:root {
+  --primary-color: #ffc300;
+  --secondary-color: #67717a;
+  --face-color: #8b5c40;
+  --font-color: #303030;
+  --gray-color: #bbbbbb;
+  --red: #ff5e5e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 100vh;
+}
+
+::placeholder {
+  color: var(--gray-color);
+}
+
+::selection {
+  color: var(--primary-color);
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 400px;
+  background: var(--secondary-color);
+  box-shadow: 0 15px 25px -2px #30303080;
+  transition: all 500ms ease-in;
+}
+
+.container:hover {
+  box-shadow: none;
+}
+
+/* avatar */
+.face {
+  margin-top: -75px;
+  position: relative;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.eye,
+.eyebrow {
+  display: inline-block;
+  position: absolute;
+  top: 59px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.eyebrow {
+  border-top: 1px solid var(--face-color);
+  top: 58px;
+}
+
+.e-1 {
+  left: 56px;
+}
+
+.e-2 {
+  left: 80px;
+}
+
+.pupil {
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  background: #000000;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid var(--face-color);
+}
+
+.mouth {
+  position: absolute;
+  top: 59%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 5px;
+  background: var(--face-color);
+  border-radius: 25px 25px 50px 50px;
+}
+
+.teeth {
+  margin-left: 2.5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  border-bottom: 1px solid var(--face-color);
+  width: 10px;
+  height: 0;
+  border-radius: 25px 25px 50px 50px;
+}
+
+body:hover .mouth,
+.container:hover .mouth {
+  width: 25px;
+  background: var(--face-color);
+}
+
+body:hover .teeth,
+.container:hover .teeth {
+  box-shadow: inset 0 0.5px 2px var(--face-color);
+  width: 20px;
+}
+
+body:hover .teeth {
+  height: 5px;
+}
+
+.container:hover .teeth {
+  height: 8px;
+}
+
+/* info */
+h1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 20px 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 2em;
+  letter-spacing: 2px;
+}
+
+h1 span {
+  color: var(--primary-color);
+}
+
+.login-info {
+  display: block;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input {
+  outline: none;
+  caret-color: var(--primary-color);
+  letter-spacing: 1px;
+}
+
+.detail {
+  margin: 8px 0;
+  padding: 7px 3px;
+  width: 250px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+  color: #ffffff;
+}
+
+.name {
+  text-transform: capitalize;
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+  padding: 5px;
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.9em;
+  width: 250px;
+}
+
+input[type="submit"]:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  transition: all 300ms ease-in-out;
+}
+
+/* hide eye */
+section i {
+  position: absolute;
+  top: 120px;
+  left: 225px;
+  text-align: center;
+  z-index: 1;
+}
+
+section .fa-eye {
+  color: var(--primary-color);
+  font-size: 1.2em;
+  cursor: pointer;
+  opacity: 0.7;
+  cursor: auto;
+}
+
+.fa-eye.hide::before {
+  content: "\f070";
+}
+
+#passwd:valid ~ .fa-eye {
+  display: block;
+}
+
+label {
+  position: absolute;
+  top: 0;
+  left: 180px;
+  background: var(--secondary-color);
+  font-size: small;
+  color: var(--red);
+  visibility: hidden;
+}
+.label-2 {
+  top: 50px;
+}
+.label-3 {
+  top: 100px;
+}
